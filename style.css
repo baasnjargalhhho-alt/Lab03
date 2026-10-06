@@ -67,7 +67,7 @@ article {
 }
 
 /* Main title */
-#anket > h2:first-child {
+.form-title {
   margin: 0;
   text-align: center;
   color: #d84f80;
@@ -85,7 +85,7 @@ article {
 }
 
 /* Fieldsets = separate cute cards */
-form fieldset {
+.card {
   position: relative;
   margin: 0 0 22px;
   padding: 25px 24px 18px;
@@ -96,14 +96,14 @@ form fieldset {
   transition: .2s ease;
 }
 
-form fieldset:hover {
+.card:hover {
   transform: translateY(-2px);
   border-color: #f19abb;
   box-shadow: 0 10px 22px rgba(119, 72, 101, .13);
 }
 
 /* Add paw to every section heading */
-legend {
+.card-title {
   padding: 7px 16px;
   border: 0;
   border-radius: 18px;
@@ -114,7 +114,7 @@ legend {
   box-shadow: 0 4px 10px rgba(115, 81, 104, .12);
 }
 
-legend::before {
+.card-title::before {
   content: "🐾 ";
 }
 
@@ -122,7 +122,7 @@ form p {
   margin: 0 0 18px;
 }
 
-label {
+.label {
   display: inline-block;
   margin-bottom: 6px;
   color: #584a57;
@@ -130,14 +130,7 @@ label {
 }
 
 /* Inputs */
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="tel"],
-input[type="email"],
-input[type="file"],
-select,
-textarea {
+.field {
   width: 100%;
   padding: 12px 14px;
   border: 2px solid #d9dfe8;
@@ -150,25 +143,22 @@ textarea {
   transition: .2s ease;
 }
 
-input[type="file"] {
+.field[type="file"] {
   padding: 9px 12px;
 }
 
-textarea {
+textarea.field {
   min-height: 95px;
   resize: vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.field:focus {
   border-color: #e47ba1;
   box-shadow: 0 0 0 4px rgba(228, 123, 161, .14);
   background: #fffafe;
 }
 
-input::placeholder,
-textarea::placeholder {
+.field::placeholder {
   color: #aaa0aa;
 }
 
@@ -243,7 +233,7 @@ tbody tr:hover {
 }
 
 /* Buttons */
-button {
+.btn {
   border: 0;
   border-radius: 14px;
   padding: 13px 25px;
@@ -255,27 +245,27 @@ button {
   transition: .25s ease;
 }
 
-button:hover {
+.btn:hover {
   transform: translateY(-2px) scale(1.01);
 }
 
-button[type="submit"] {
+.btn-submit {
   background: linear-gradient(90deg, #df6391, #76b5df);
   color: #ffffff;
   box-shadow: 0 7px 16px rgba(130, 88, 113, .20);
 }
 
-button[type="submit"]::before {
+.btn-submit::before {
   content: "🐶 ";
 }
 
-button[type="reset"] {
+.btn-reset {
   background: #e9f4fc;
   color: #547891;
   border: 2px solid #bcdff7;
 }
 
-button[type="reset"]::before {
+.btn-reset::before {
   content: "↻ ";
 }
 
@@ -310,11 +300,11 @@ footer p {
     display: none;
   }
 
-  #anket > h2:first-child {
+  .form-title {
     font-size: 22px;
   }
 
-  form fieldset,
+  .card,
   #anket > section {
     padding: 19px 14px;
   }
@@ -325,7 +315,7 @@ footer p {
     font-size: 12px;
   }
 
-  button {
+  .btn {
     width: 100%;
     margin-right: 0;
   }
@@ -373,6 +363,9 @@ footer p {
 }
 
 .success-close {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
   position: absolute;
   right: 10px;
   top: 9px;
@@ -400,4 +393,20 @@ footer p {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+
+/* ===== Badge (position: relative + absolute) ===== */
+/* .card нь position: relative тул badge нь картынхаа баруун дээд буланд байрлана */
+.badge {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #d84f80;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(216, 79, 128, .30);
 }
