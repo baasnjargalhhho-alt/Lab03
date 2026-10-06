@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лаборатори 03: Тэжээвэр амьтан үрчлэгчийн анкет</title>
+  <title>Лаборатори 02: Тэжээвэр амьтан үрчлэгчийн анкет</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <article>
       <section id="anket">
 
-        <h2 class="form-title">Гэрийн тэжээвэр амьтан үрчлэхийг хүсэгчийн нэгдсэн анкет</h2>
+        <h2>Гэрийн тэжээвэр амьтан үрчлэхийг хүсэгчийн нэгдсэн анкет</h2>
 
         <p>
           Энэхүү анкет нь үрчлэгдэх амьтныг хайр дүүрэн, аюулгүй,
@@ -33,19 +33,18 @@
 
         <form id="adoptionForm" action="#" method="POST" enctype="multipart/form-data">
 
-          <fieldset class="card">
-            <legend class="card-title">1. Үрчлэгчийн дэлгэрэнгүй мэдээлэл</legend>
-            <span class="badge">Заавал бөглөнө</span>
+          <fieldset>
+            <legend>1. Үрчлэгчийн дэлгэрэнгүй мэдээлэл</legend>
 
             <p>
-              <label class="label" for="fullname">Бүтэн нэр (Овог, нэр):</label><br>
-              <input class="field" type="text" id="fullname" name="fullname"
+              <label for="fullname">Бүтэн нэр (Овог, нэр):</label><br>
+              <input type="text" id="fullname" name="fullname"
                      placeholder="Б. Бат" required minlength="2">
             </p>
 
             <p>
-              <label class="label" for="register">Регистрийн дугаар:</label><br>
-              <input class="field" type="text" id="register" name="register"
+              <label for="register">Регистрийн дугаар:</label><br>
+              <input type="text" id="register" name="register"
                      placeholder="УБ12345678"
                      required
                      pattern="[А-ЯӨҮЁа-яөүё]{2}[0-9]{8}"
@@ -53,13 +52,13 @@
             </p>
 
             <p>
-              <label class="label" for="dob">Төрсөн огноо:</label><br>
-              <input class="field" type="date" id="dob" name="dob" required>
+              <label for="dob">Төрсөн огноо:</label><br>
+              <input type="date" id="dob" name="dob" required>
             </p>
 
             <p>
-              <label class="label" for="age">Нас:</label><br>
-              <input class="field" type="number" id="age" name="age"
+              <label for="age">Нас:</label><br>
+              <input type="number" id="age" name="age"
                      min="18" max="100" required>
               <br>
               <small>
@@ -69,20 +68,20 @@
             </p>
 
             <p>
-              <label class="label" for="idcopy">Иргэний үнэмлэхний хуулбар хавсаргах:</label><br>
-              <input class="field" type="file" id="idcopy" name="idcopy"
+              <label for="idcopy">Иргэний үнэмлэхний хуулбар хавсаргах:</label><br>
+              <input type="file" id="idcopy" name="idcopy"
                      accept="image/*,.pdf" required>
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">Холбоо барих мэдээлэл</legend>
+          <fieldset>
+            <legend>Холбоо барих мэдээлэл</legend>
 
             <p>
-              <label class="label" for="phone">Үндсэн утасны дугаар:</label><br>
-              <input class="field" type="tel" id="phone" name="phone"
+              <label for="phone">Үндсэн утасны дугаар:</label><br>
+              <input type="tel" id="phone" name="phone"
                      pattern="[0-9]{8}"
                      placeholder="88112233"
                      required
@@ -90,19 +89,19 @@
             </p>
 
             <p>
-              <label class="label" for="emergency_name">
+              <label for="emergency_name">
                 Яаралтай үед холбоо барих хүний нэр:
               </label><br>
-              <input class="field" type="text" id="emergency_name"
+              <input type="text" id="emergency_name"
                      name="emergency_name"
                      required minlength="2">
             </p>
 
             <p>
-              <label class="label" for="emergency_phone">
+              <label for="emergency_phone">
                 Яаралтай үед холбоо барих хүний утас:
               </label><br>
-              <input class="field" type="tel" id="emergency_phone"
+              <input type="tel" id="emergency_phone"
                      name="emergency_phone"
                      pattern="[0-9]{8}"
                      placeholder="99112233"
@@ -111,31 +110,31 @@
             </p>
 
             <p>
-              <label class="label" for="email">Цахим шуудан (Email):</label><br>
-              <input class="field" type="email" id="email" name="email"
+              <label for="email">Цахим шуудан (Email):</label><br>
+              <input type="email" id="email" name="email"
                      placeholder="example@gmail.com" required>
             </p>
 
             <p>
-              <label class="label" for="address">
+              <label for="address">
                 Гэрийн хаяг (Оршин суугаа хаяг):
               </label><br>
-              <textarea class="field" id="address" name="address"
+              <textarea id="address" name="address"
                         rows="3" required minlength="10"></textarea>
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">Ажил эрхлэлт ба санхүүгийн чадамж</legend>
+          <fieldset>
+            <legend>Ажил эрхлэлт ба санхүүгийн чадамж</legend>
 
             <p>
-              <label class="label" for="employment">
+              <label for="employment">
                 Одоогийн ажил эрхлэлтийн байдал:
               </label><br>
 
-              <select class="field" id="employment" name="employment" required>
+              <select id="employment" name="employment" required>
                 <option value="">-- Сонгоно уу --</option>
                 <option value="private">Хувийн хэвшилд ажилладаг</option>
                 <option value="public">Төрийн албан хаагч</option>
@@ -148,17 +147,17 @@
             </p>
 
             <p>
-              <label class="label" for="company">
+              <label for="company">
                 Албан байгууллагын нэр, таны албан тушаал:
               </label><br>
-              <input class="field" type="text" id="company" name="company">
+              <input type="text" id="company" name="company">
             </p>
 
             <p>
-              <label class="label" for="workphone">
+              <label for="workphone">
                 Ажлын газрын утасны дугаар:
               </label><br>
-              <input class="field" type="tel" id="workphone" name="workphone"
+              <input type="tel" id="workphone" name="workphone"
                      pattern="[0-9]{8}"
                      placeholder="70112233"
                      title="8 оронтой тоо оруулна уу">
@@ -167,8 +166,8 @@
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">Гадаад зорчих хөдөлгөөн</legend>
+          <fieldset>
+            <legend>Гадаад зорчих хөдөлгөөн</legend>
 
             <p>
               Та ойрын 1–2 жилийн хугацаанд гадаад улс руу
@@ -178,32 +177,32 @@
             <p>
               <input type="radio" id="abroad_yes"
                      name="abroad" value="yes" required>
-              <label class="label" for="abroad_yes">Тийм</label>
+              <label for="abroad_yes">Тийм</label>
 
               <input type="radio" id="abroad_no"
                      name="abroad" value="no">
-              <label class="label" for="abroad_no">Үгүй</label>
+              <label for="abroad_no">Үгүй</label>
             </p>
 
             <p>
-              <label class="label" for="abroad_pet">
+              <label for="abroad_pet">
                 Хэрэв тийм бол амьтныг хэрхэх вэ?
               </label><br>
-              <input class="field" type="text" id="abroad_pet" name="abroad_pet">
+              <input type="text" id="abroad_pet" name="abroad_pet">
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">2. Амьдрах орчин нөхцөл</legend>
+          <fieldset>
+            <legend>2. Амьдрах орчин нөхцөл</legend>
 
             <p>
-              <label class="label" for="housing">
+              <label for="housing">
                 Та ямар төрлийн орон сууцанд амьдардаг вэ?
               </label><br>
 
-              <select class="field" id="housing" name="housing" required>
+              <select id="housing" name="housing" required>
                 <option value="">-- Сонгоно уу --</option>
                 <option value="apartment">
                   Нийтийн байр / Байшин (Орон сууц)
@@ -219,11 +218,11 @@
             <p>
               <input type="radio" id="owner"
                      name="ownership" value="owner" required>
-              <label class="label" for="owner">Өмчлөгч (Өөрийн байр)</label>
+              <label for="owner">Өмчлөгч (Өөрийн байр)</label>
 
               <input type="radio" id="renter"
                      name="ownership" value="renter">
-              <label class="label" for="renter">Түрээслэгч (Түрээсийн байр)</label>
+              <label for="renter">Түрээслэгч (Түрээсийн байр)</label>
             </p>
 
             <p>
@@ -234,19 +233,19 @@
             <p>
               <input type="radio" id="landlord_yes"
                      name="landlord" value="yes">
-              <label class="label" for="landlord_yes">Тийм</label>
+              <label for="landlord_yes">Тийм</label>
 
               <input type="radio" id="landlord_no"
                      name="landlord" value="no">
-              <label class="label" for="landlord_no">Үгүй</label>
+              <label for="landlord_no">Үгүй</label>
             </p>
 
             <p>
-              <label class="label" for="living_with">
+              <label for="living_with">
                 Та гэр бүлээрээ амьдардаг уу, эсвэл ганцаараа юу?
               </label><br>
 
-              <select class="field" id="living_with" name="living_with" required>
+              <select id="living_with" name="living_with" required>
                 <option value="">-- Сонгоно уу --</option>
                 <option value="family">Гэр бүлээрээ</option>
                 <option value="alone">Ганцаараа</option>
@@ -254,19 +253,19 @@
             </p>
 
             <p>
-              <label class="label" for="family_count">
+              <label for="family_count">
                 Гэр бүлийн гишүүдийн тоо:
               </label><br>
-              <input class="field" type="number" id="family_count"
+              <input type="number" id="family_count"
                      name="family_count"
                      min="1" max="30" required>
             </p>
 
             <p>
-              <label class="label" for="children">
+              <label for="children">
                 Хүүхэд байгаа эсэх, байгаа бол нас:
               </label><br>
-              <input class="field" type="text" id="children" name="children"
+              <input type="text" id="children" name="children"
                      placeholder="Жишээ: 2 хүүхэд, 5 ба 9 настай">
             </p>
 
@@ -277,11 +276,11 @@
             <p>
               <input type="radio" id="consent_yes"
                      name="family_consent" value="yes" required>
-              <label class="label" for="consent_yes">Тийм</label>
+              <label for="consent_yes">Тийм</label>
 
               <input type="radio" id="consent_no"
                      name="family_consent" value="no">
-              <label class="label" for="consent_no">Үгүй</label>
+              <label for="consent_no">Үгүй</label>
             </p>
 
             <p>
@@ -292,18 +291,18 @@
             <p>
               <input type="radio" id="allergy_yes"
                      name="allergy" value="yes" required>
-              <label class="label" for="allergy_yes">Тийм</label>
+              <label for="allergy_yes">Тийм</label>
 
               <input type="radio" id="allergy_no"
                      name="allergy" value="no">
-              <label class="label" for="allergy_no">Үгүй</label>
+              <label for="allergy_no">Үгүй</label>
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">
+          <fieldset>
+            <legend>
               3. Амьдрах орчны зураг хавсаргах хэсэг (заавал бөглөх)
             </legend>
 
@@ -315,31 +314,31 @@
             </p>
 
             <p>
-              <label class="label" for="photo_inside">
+              <label for="photo_inside">
                 Гэрийн доторх ерөнхий зураг
                 (амьтан байрлах үндсэн хэсэг):
               </label><br>
-              <input class="field" type="file" id="photo_inside"
+              <input type="file" id="photo_inside"
                      name="photo_inside"
                      accept="image/*" required>
             </p>
 
             <p>
-              <label class="label" for="photo_yard">
+              <label for="photo_yard">
                 Хашаа байшин бол: хашааны үүд,
                 хайс хамгаалалтын бүрэн бүтэн байдлыг харуулсан зураг:
               </label><br>
-              <input class="field" type="file" id="photo_yard"
+              <input type="file" id="photo_yard"
                      name="photo_yard"
                      accept="image/*">
             </p>
 
             <p>
-              <label class="label" for="photo_corner">
+              <label for="photo_corner">
                 Амьтанд зориулж бэлдсэн булан/хэвтэр,
                 хоолны аяга зэргийн зураг (бэлдсэн бол):
               </label><br>
-              <input class="field" type="file" id="photo_corner"
+              <input type="file" id="photo_corner"
                      name="photo_corner"
                      accept="image/*">
             </p>
@@ -347,40 +346,40 @@
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">4. Тэжээвэр амьтан тэжээж байсан туршлага</legend>
+          <fieldset>
+            <legend>4. Тэжээвэр амьтан тэжээж байсан туршлага</legend>
 
             <p>
-              <label class="label" for="exp_before">
+              <label for="exp_before">
                 Та өмнө нь амьтан тэжээж байсан уу?
                 Хэрэв тийм бол ямар амьтан, хэдэн жил тэжээсэн бэ?
               </label><br>
 
-              <textarea class="field" id="exp_before"
+              <textarea id="exp_before"
                         name="exp_before"
                         rows="3"
                         required></textarea>
             </p>
 
             <p>
-              <label class="label" for="exp_current">
+              <label for="exp_current">
                 Одоо танайд тэжээвэр амьтан байгаа юу?
                 (Байгаа бол үүлдэр, нас, хүйс, ариутгасан эсэх):
               </label><br>
 
-              <textarea class="field" id="exp_current"
+              <textarea id="exp_current"
                         name="exp_current"
                         rows="3"
                         required></textarea>
             </p>
 
             <p>
-              <label class="label" for="exp_past">
+              <label for="exp_past">
                 Өмнө нь тэжээж байсан амьтан тань одоо хаана байгаа вэ?
                 (Хөгширч үхсэн, хүнд өгсөн г.м):
               </label><br>
 
-              <textarea class="field" id="exp_past"
+              <textarea id="exp_past"
                         name="exp_past"
                         rows="3"></textarea>
             </p>
@@ -388,36 +387,36 @@
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">5. Үрчлэн авахыг хүсэж буй амьтны талаар</legend>
+          <fieldset>
+            <legend>5. Үрчлэн авахыг хүсэж буй амьтны талаар</legend>
 
             <p>Та ямар амьтан үрчлэхийг хүсэж байна вэ?</p>
 
             <p>
               <input type="radio" id="pet_dog"
                      name="pet_type" value="dog" required>
-              <label class="label" for="pet_dog">Нохой</label>
+              <label for="pet_dog">Нохой</label>
 
               <input type="radio" id="pet_cat"
                      name="pet_type" value="cat">
-              <label class="label" for="pet_cat">Муур</label>
+              <label for="pet_cat">Муур</label>
 
               <input type="radio" id="pet_other"
                      name="pet_type" value="other">
-              <label class="label" for="pet_other">Бусад</label>
+              <label for="pet_other">Бусад</label>
 
-              <input class="field" type="text" id="pet_other_text"
+              <input type="text" id="pet_other_text"
                      name="pet_other_text"
                      aria-label="Бусад амьтны төрөл">
             </p>
 
             <p>
-              <label class="label" for="pet_details">
+              <label for="pet_details">
                 Хүсэж буй амьтны нас, хүйс, үүлдэр
                 (тодорхой амьтан зааж байгаа бол нэр):
               </label><br>
 
-              <input class="field" type="text" id="pet_details"
+              <input type="text" id="pet_details"
                      name="pet_details" required>
             </p>
 
@@ -426,21 +425,21 @@
             <p>
               <input type="radio" id="purpose_companion"
                      name="purpose" value="companion" required>
-              <label class="label" for="purpose_companion">
+              <label for="purpose_companion">
                 Хань болох / Гэр бүлийн гишүүн
               </label>
 
               <input type="radio" id="purpose_guard"
                      name="purpose" value="guard">
-              <label class="label" for="purpose_guard">Харуул хамгаалалт</label>
+              <label for="purpose_guard">Харуул хамгаалалт</label>
 
               <input type="radio" id="purpose_child"
                      name="purpose" value="for_child">
-              <label class="label" for="purpose_child">Хүүхдэдээ авч өгөх</label>
+              <label for="purpose_child">Хүүхдэдээ авч өгөх</label>
 
               <input type="radio" id="purpose_other"
                      name="purpose" value="other">
-              <label class="label" for="purpose_other">Бусад</label>
+              <label for="purpose_other">Бусад</label>
             </p>
 
             <p>
@@ -451,46 +450,46 @@
             <p>
               <input type="checkbox" id="place_inside"
                      name="place" value="inside">
-              <label class="label" for="place_inside">Гэрт дотор</label>
+              <label for="place_inside">Гэрт дотор</label>
 
               <input type="checkbox" id="place_yard_tied"
                      name="place" value="yard_tied">
-              <label class="label" for="place_yard_tied">Хашаанд (уяатай)</label>
+              <label for="place_yard_tied">Хашаанд (уяатай)</label>
 
               <input type="checkbox" id="place_yard_free"
                      name="place" value="yard_free">
-              <label class="label" for="place_yard_free">Хашаанд (уяагүй)</label>
+              <label for="place_yard_free">Хашаанд (уяагүй)</label>
 
               <input type="checkbox" id="place_door"
                      name="place" value="outside_door">
-              <label class="label" for="place_door">Гэрийн гадна үүдэнд</label>
+              <label for="place_door">Гэрийн гадна үүдэнд</label>
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">6. Асран хамгаалах ба хариуцлага</legend>
+          <fieldset>
+            <legend>6. Асран хамгаалах ба хариуцлага</legend>
 
             <p>
-              <label class="label" for="hours_alone">
+              <label for="hours_alone">
                 Та амьтныг өдөрт хэдэн цаг ганцааранг нь үлдээх вэ?
               </label><br>
 
-              <input class="field" type="number" id="hours_alone"
+              <input type="number" id="hours_alone"
                      name="hours_alone"
                      min="0" max="24" required>
               цаг
             </p>
 
             <p>
-              <label class="label" for="travel_plan">
+              <label for="travel_plan">
                 Хэрэв та аялал зугаалгаар явах эсвэл
                 хөдөө орон нутаг руу яаралтай явах болвол
                 амьтнаа хаана үлдээх вэ?
               </label><br>
 
-              <textarea class="field" id="travel_plan"
+              <textarea id="travel_plan"
                         name="travel_plan"
                         rows="3"
                         required
@@ -506,11 +505,11 @@
             <p>
               <input type="radio" id="followup_yes"
                      name="followup" value="yes" required>
-              <label class="label" for="followup_yes">Тийм</label>
+              <label for="followup_yes">Тийм</label>
 
               <input type="radio" id="followup_no"
                      name="followup" value="no">
-              <label class="label" for="followup_no">Үгүй</label>
+              <label for="followup_no">Үгүй</label>
             </p>
 
             <p>
@@ -522,18 +521,18 @@
             <p>
               <input type="radio" id="future_yes"
                      name="future" value="yes" required>
-              <label class="label" for="future_yes">Тийм</label>
+              <label for="future_yes">Тийм</label>
 
               <input type="radio" id="future_no"
                      name="future" value="no">
-              <label class="label" for="future_no">Үгүй</label>
+              <label for="future_no">Үгүй</label>
             </p>
 
           </fieldset>
 
 
-          <fieldset class="card">
-            <legend class="card-title">Баталгаажуулалт</legend>
+          <fieldset>
+            <legend>Баталгаажуулалт</legend>
 
             <p>
               <input type="checkbox"
@@ -542,20 +541,33 @@
                      value="yes"
                      required>
 
-              <label class="label" for="confirm">
+              <label for="confirm">
                 Дээрх мэдээллийг үнэн зөв бөглөсөн болно.
               </label>
             </p>
 
             <p>
-              <label class="label" for="filled_date">
+              <label for="filled_date">
                 Анкет бөглөсөн огноо:
               </label><br>
 
-              <input class="field" type="date"
+              <input type="date"
                      id="filled_date"
                      name="filled_date"
                      required>
+            </p>
+
+            <p>
+              <label for="signature">
+                Үрчлэгчийн гарын үсэг
+                (бүтэн нэрээ бичнэ үү):
+              </label><br>
+
+              <input type="text"
+                     id="signature"
+                     name="signature"
+                     required
+                     minlength="2">
             </p>
 
           </fieldset>
@@ -659,8 +671,8 @@
           </section>
 
 
-          <button type="submit" class="btn btn-submit">Анкет илгээх</button>
-          <button type="reset" class="btn btn-reset">Дахин эхлүүлэх</button>
+          <button type="submit">Анкет илгээх</button>
+          <button type="reset">Дахин эхлүүлэх</button>
 
         </form>
 
@@ -678,7 +690,6 @@
     const form = document.getElementById("adoptionForm");
     const successMessage = document.getElementById("successMessage");
     const closeButton = document.querySelector(".success-close");
-    let successTimer;
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -690,17 +701,14 @@
 
       successMessage.classList.add("show");
       successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
-            clearTimeout(successTimer);
-      successTimer = setTimeout(function () {
-        successMessage.classList.remove("show");
-      }, 3 * 60 * 1000);
     });
 
     closeButton.addEventListener("click", function () {
       successMessage.classList.remove("show");
-            clearTimeout(successTimer);
     });
   </script>
 
 </body>
 </html>
+
+ 

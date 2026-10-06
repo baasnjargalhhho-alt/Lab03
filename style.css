@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap");
 
 * {
@@ -67,7 +66,7 @@ article {
 }
 
 /* Main title */
-.form-title {
+#anket > h2:first-child {
   margin: 0;
   text-align: center;
   color: #d84f80;
@@ -85,7 +84,7 @@ article {
 }
 
 /* Fieldsets = separate cute cards */
-.card {
+form fieldset {
   position: relative;
   margin: 0 0 22px;
   padding: 25px 24px 18px;
@@ -96,14 +95,14 @@ article {
   transition: .2s ease;
 }
 
-.card:hover {
+form fieldset:hover {
   transform: translateY(-2px);
   border-color: #f19abb;
   box-shadow: 0 10px 22px rgba(119, 72, 101, .13);
 }
 
 /* Add paw to every section heading */
-.card-title {
+legend {
   padding: 7px 16px;
   border: 0;
   border-radius: 18px;
@@ -114,7 +113,7 @@ article {
   box-shadow: 0 4px 10px rgba(115, 81, 104, .12);
 }
 
-.card-title::before {
+legend::before {
   content: "🐾 ";
 }
 
@@ -122,7 +121,7 @@ form p {
   margin: 0 0 18px;
 }
 
-.label {
+label {
   display: inline-block;
   margin-bottom: 6px;
   color: #584a57;
@@ -130,7 +129,14 @@ form p {
 }
 
 /* Inputs */
-.field {
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
   width: 100%;
   padding: 12px 14px;
   border: 2px solid #d9dfe8;
@@ -143,22 +149,25 @@ form p {
   transition: .2s ease;
 }
 
-.field[type="file"] {
+input[type="file"] {
   padding: 9px 12px;
 }
 
-textarea.field {
+textarea {
   min-height: 95px;
   resize: vertical;
 }
 
-.field:focus {
+input:focus,
+select:focus,
+textarea:focus {
   border-color: #e47ba1;
   box-shadow: 0 0 0 4px rgba(228, 123, 161, .14);
   background: #fffafe;
 }
 
-.field::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #aaa0aa;
 }
 
@@ -233,7 +242,7 @@ tbody tr:hover {
 }
 
 /* Buttons */
-.btn {
+button {
   border: 0;
   border-radius: 14px;
   padding: 13px 25px;
@@ -245,27 +254,27 @@ tbody tr:hover {
   transition: .25s ease;
 }
 
-.btn:hover {
+button:hover {
   transform: translateY(-2px) scale(1.01);
 }
 
-.btn-submit {
+button[type="submit"] {
   background: linear-gradient(90deg, #df6391, #76b5df);
   color: #ffffff;
   box-shadow: 0 7px 16px rgba(130, 88, 113, .20);
 }
 
-.btn-submit::before {
+button[type="submit"]::before {
   content: "🐶 ";
 }
 
-.btn-reset {
+button[type="reset"] {
   background: #e9f4fc;
   color: #547891;
   border: 2px solid #bcdff7;
 }
 
-.btn-reset::before {
+button[type="reset"]::before {
   content: "↻ ";
 }
 
@@ -300,11 +309,11 @@ footer p {
     display: none;
   }
 
-  .form-title {
+  #anket > h2:first-child {
     font-size: 22px;
   }
 
-  .card,
+  form fieldset,
   #anket > section {
     padding: 19px 14px;
   }
@@ -315,7 +324,7 @@ footer p {
     font-size: 12px;
   }
 
-  .btn {
+  button {
     width: 100%;
     margin-right: 0;
   }
@@ -363,9 +372,6 @@ footer p {
 }
 
 .success-close {
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
   position: absolute;
   right: 10px;
   top: 9px;
@@ -393,20 +399,4 @@ footer p {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-}
-
-
-/* ===== Badge (position: relative + absolute) ===== */
-/* .card нь position: relative тул badge нь картынхаа баруун дээд буланд байрлана */
-.badge {
-  position: absolute;
-  top: -14px;
-  right: 18px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: #d84f80;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 800;
-  box-shadow: 0 4px 10px rgba(216, 79, 128, .30);
 }
